@@ -1,3 +1,4 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -96,6 +97,24 @@
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-poppins;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-playfair;
+  }
+}
+
+@layer utilities {
+  .cl-link-hover {
+    @apply hover:underline transition-all duration-200;
+  }
+  
+  .cl-card {
+    @apply bg-white border border-cl-accent/20 shadow-sm hover:shadow-md transition-shadow duration-200;
+  }
+  
+  .cl-gold-border {
+    @apply border border-cl-accent/30;
   }
 }
